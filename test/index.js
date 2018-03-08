@@ -3,6 +3,12 @@ const test = require('tape')
 const path = require('path')
 const preferredPM = require('preferred-pm')
 
+test('preferredPM()', t => {
+  t.throws(() => preferredPM(), /pkgPath should be a string/)
+  t.throws(() => preferredPM(1), /pkgPath should be a string/)
+  t.end()
+})
+
 test('prefer pnpm', t => {
   preferredPM(path.join(__dirname, 'prefers-pnpm'))
     .then(pm => {

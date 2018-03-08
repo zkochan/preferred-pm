@@ -4,6 +4,7 @@ const pathExists = require('path-exists')
 const whichPM = require('which-pm')
 
 module.exports = (pkgPath) => {
+  if (typeof pkgPath !== 'string') throw new TypeError(`pkgPath should be a string, got ${typeof pkgPath}`)
   return pathExists(path.join(pkgPath, 'package-lock.json'))
     .then(exists => {
       if (exists) {
