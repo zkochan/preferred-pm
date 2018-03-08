@@ -18,7 +18,7 @@ const preferredPM = require('preferred-pm')
 
 preferredPM(process.cwd())
     .then(pm => console.log(pm))
-//> {name: "npm", version: "5"}
+//> {name: "npm", version: ">=5"}
 ```
 
 ## License
