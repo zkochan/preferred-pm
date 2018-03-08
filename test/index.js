@@ -21,10 +21,19 @@ test('prefer Yarn', t => {
     .catch(t.end)
 })
 
+test('prefer npm 5', t => {
+  preferredPM(path.join(__dirname, 'prefers-npm-5'))
+    .then(pm => {
+      t.deepEqual(pm, {name: 'npm', version: '>=5'})
+      t.end()
+    })
+    .catch(t.end)
+})
+
 test('prefer npm', t => {
   preferredPM(path.join(__dirname, 'prefers-npm'))
     .then(pm => {
-      t.deepEqual(pm, {name: 'npm', version: '5'})
+      t.deepEqual(pm, {name: 'npm', version: '*'})
       t.end()
     })
     .catch(t.end)

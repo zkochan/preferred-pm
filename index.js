@@ -9,7 +9,7 @@ module.exports = (pkgPath) => {
       if (exists) {
         return {
           name: 'npm',
-          version: '5'
+          version: '>=5'
         }
       }
       return pathExists(path.join(pkgPath, 'yarn.lock'))
@@ -28,7 +28,7 @@ module.exports = (pkgPath) => {
                   version: '*'
                 }
               }
-              return whichPM(pkgPath)
+              return whichPM(pkgPath).then(pm => pm && {name: pm.name, version: pm.version || '*'})
             })
         })
     })
