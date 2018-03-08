@@ -1,5 +1,4 @@
 dependencies:
-  load-yaml-file: 0.1.0
   path-exists: 3.0.0
   preferred-pm: 'link:../__package_previews__/preferred-pm/preferred-pm'
   which-pm: 1.0.1
@@ -2217,7 +2216,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
-  load-yaml-file: ^0.1.0
   package-preview: ^1.0.5
   path-exists: ^3.0.0
   standard: ^11.0.0

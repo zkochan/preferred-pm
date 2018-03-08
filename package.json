@@ -32,7 +32,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "load-yaml-file": "^0.1.0",
     "path-exists": "^3.0.0",
     "which-pm": "^1.0.1"
   },
