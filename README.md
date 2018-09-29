@@ -1,3 +1,5 @@
+> this package has been moved to https://github.com/zkochan/packages/tree/master/preferred-pm
+
 # preferred-pm
 
 > Returns the preferred package manager of a project
